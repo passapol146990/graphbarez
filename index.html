@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matplotlib html and Pyscript</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body class="text-center bg-dark">
+
+    <py-config>
+        packages = ["matplotlib", "numpy"]
+    </py-config>
+
+    <div class="flex-top p-4 bg-dark">
+        <a class="p-1 btn btn-outline-info" href="./index.html" class="">เว็บสร้างกราฟ เส้น แท่ง วงกลม ฟรี</a>
+    </div>
+
+    <div class="container">
+        <p class="h1 text-light">กราฟแท่ง</ย>
+
+
+        <form onsubmit="return false">
+            <input id="x2" class="form-control mb-1" type="text" placeholder="ข้อมูลชาย">
+            <input id="y2" class="form-control mb-1" type="text" placeholder="ข้อมูลหญิง">
+            <input id="c2" class="form-control mb-3" type="text" placeholder="ข้อมูลแกน X">
+
+            <input id="name_x2" class="form-control mb-1" type="text" placeholder="ชื่อแกน X">
+            <input id="name_y2" class="form-control mb-1" type="text" placeholder="ชื่อแกน Y">
+            <input id="title_graph2" class="form-control mb-1" type="text" placeholder="ชื่อของกราฟ">
+            
+            <div class="form-group text-light mb-3">
+                <input class="form-check-input" type="checkbox" id="grid" >
+                <label class="form-lable ">เส้นแบ่ง grid</label>
+            </div>
+            <button class="btn btn-outline-warning form-control mb-1" py-click="ok_g2()" id="ok" type="button">ok</button>
+            <button class="btn btn-outline-danger form-control mb-5" py-click="clear2()" id="clear" type="button">clear</button>
+        </form>
+
+    </div>
+
+    <div class="p-3 mb-5">
+        <div class="card p-4">
+            <div class="p-3" id="title2"></div>
+        </div>
+    </div>
+    <div class="text-end fixed-bottom">
+        <a class="btn btn-outline-light" target="_blank" href="https://www.facebook.com/timganez/">พัฒนาเว็บไซด์โดย พัสพล สุทาธรรม 19/2/2023 FB : พัสพล พลังชีวิต</a>
+    </div>
+    <py-script src="data.py"></py-script>
+</body>
+</html>
